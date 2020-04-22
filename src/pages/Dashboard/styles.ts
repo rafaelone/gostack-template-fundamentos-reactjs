@@ -21,6 +21,11 @@ export const CardContainer = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
   margin-top: -150px;
+  overflow-x: auto;
+  transition: margin-top 0.6s ease;
+  @media (max-width: 835px) {
+    margin-top: 0px;
+  }
 `;
 
 export const Card = styled.div`
@@ -90,6 +95,45 @@ export const TableContainer = styled.section`
 
     td:last-child {
       border-radius: 0 8px 8px 0;
+    }
+  }
+`;
+
+export const TableMobileContainer = styled.div`
+  margin-top: 64px;
+  strong {
+    font-size: 20px;
+    margin-bottom: 24px;
+    line-height: 30px;
+    display: block;
+  }
+  div {
+    background: #fff;
+    padding: 22px 32px;
+    border-radius: 5px;
+    & + div {
+      margin-top: 16px;
+    }
+    p {
+      &.title {
+        font-size: 14px;
+        line-height: 21px;
+        color: #363f5f;
+      }
+      &.income {
+        color: #12a454;
+      }
+
+      &.outcome {
+        color: #e83f5b;
+      }
+    }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      color: #969cb3;
     }
   }
 `;
